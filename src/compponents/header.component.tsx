@@ -1,6 +1,6 @@
 "use client";
 
-import { SessionProvider, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 
 const Header = () => {
@@ -8,11 +8,11 @@ const Header = () => {
   const user = session?.user;
 
   return (
-    <header className="bg-white h-20">
-      <nav className="h-full flex justify-between container items-center">
+    <header className="bg-stone-700">
+      <nav className="h-full flex justify-between container items-center px-5">
         <div>
           <Link href="/" className="text-ct-dark-600 text-2xl font-semibold">
-            CodevoWeb
+            OAuth
           </Link>
         </div>
         <ul className="flex items-center gap-4">
