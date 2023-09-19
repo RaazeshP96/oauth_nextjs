@@ -25,6 +25,6 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
-    CredentialsProvider({}), // Include a Credentials provider (username/password)
+    // CredentialsProvider({}), // Include a Credentials provider (username/password)
   ],
 };
