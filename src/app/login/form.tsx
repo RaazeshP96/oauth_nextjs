@@ -1,6 +1,7 @@
 "use client"; // Indicates that this module is client-side code.
 
 import { signIn } from "next-auth/react"; // Import the signIn function from NextAuth for authentication.
+import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation"; // Import Next.js navigation utilities.
 import { ChangeEvent, useState } from "react"; // Import React hooks for managing component state.
 
@@ -104,32 +105,48 @@ export const LoginForm = () => {
 
       {/* Sign In with Google button */}
       <a
-        className="px-7 py-2 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-        style={{ backgroundColor: "#ffffff", color: "gray" }}
+        className="px-7 py-2 text-white bg-red-700 font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
         onClick={() => signIn("google", { callbackUrl })}
         role="button"
       >
-        <img
+        <Image
           className="pr-2"
           src="/images/google.svg"
-          alt=""
-          style={{ height: "2rem" }}
+          alt="google logo"
+          height={32}
+          width={32}
         />
         Continue with Google
       </a>
 
       {/* Sign In with GitHub button */}
       <a
+        className="px-7 py-2 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+        style={{ backgroundColor: "#5A67D8" }}
+        onClick={() => signIn("facebook", { callbackUrl })}
+        role="button"
+      >
+        <Image
+          className="pr-2"
+          src="/images/facebook.png"
+          alt="Facebook logo"
+          height={32}
+          width={32}
+        />
+        Continue with Facebook
+      </a>
+      <a
         className="px-7 py-2 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
         style={{ backgroundColor: "#000000" }}
         onClick={() => signIn("github", { callbackUrl })}
         role="button"
       >
-        <img
+        <Image
           className="pr-2"
           src="/images/github.png"
-          alt=""
-          style={{ height: "2.2rem" }}
+          alt="github logo"
+          height={32}
+          width={32}
         />
         Continue with GitHub
       </a>
