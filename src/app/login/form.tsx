@@ -63,7 +63,7 @@ export const LoginForm = () => {
       )}
 
       {/* Email input field */}
-      {/* <div className="mb-6">
+      <div className="mb-6">
         <input
           required
           type="email"
@@ -73,10 +73,10 @@ export const LoginForm = () => {
           placeholder="Email address"
           className={`${input_style}`}
         />
-      </div> */}
+      </div>
 
       {/* Password input field */}
-      {/* <div className="mb-6">
+      <div className="mb-6">
         <input
           required
           type="password"
@@ -86,22 +86,22 @@ export const LoginForm = () => {
           placeholder="Password"
           className={`${input_style}`}
         />
-      </div> */}
+      </div>
 
       {/* Sign In button */}
-      {/* <button
+      <button
         type="submit"
         style={{ backgroundColor: `${loading ? "#ccc" : "#3446eb"}` }}
         className="inline-block px-7 py-4 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
         disabled={loading}
       >
         {loading ? "loading..." : "Sign In"}
-      </button> */}
+      </button>
 
       {/* OR divider */}
-      {/* <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
+      <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
         <p className="text-center font-semibold mx-4 mb-0">OR</p>
-      </div> */}
+      </div>
 
       {/* Sign In with Google button */}
       <a
